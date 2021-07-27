@@ -16,5 +16,5 @@ int			main(int ac, char **av)
 		stack_a->stack[i] = ft_atoi(av[i + 1]);
 		i++;
 	}
-	print_stack(stack_a);
+	// Need some test on stack operation
 }
