@@ -2,7 +2,7 @@ LIBFT_ROOT = ./mini_lib
 
 NAME = pushswap
 SRCS =	main.c mem_alloc.c  stack_utils.c stack_operation_one.c \
-	stack_operation_two.c stack_operation_three.c
+	stack_operation_two.c stack_operation_three.c little_stack.c
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:.c=.o)

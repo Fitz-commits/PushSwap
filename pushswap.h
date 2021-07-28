@@ -27,6 +27,12 @@ void					rra(t_stack *stack_a, int print);
 void					pa(t_stack *stack_a, t_stack *stack_b);
 void					pb(t_stack *stack_a, t_stack *stack_b);
 
+void					three_number(t_stack *stack_a);
+void					four_number(t_stack *stack_a, t_stack *stack_b);
+void					five_number(t_stack *stack_a, t_stack *stack_b);
+int						find_min(t_stack *stack);
+int						find_max(t_stack *stack);
+
 // DEBUGGING ONLY
 void					print_stack(t_stack *stack);
 #endif
