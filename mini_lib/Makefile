@@ -4,7 +4,7 @@ FLAGS = -Wall -Werror -Wextra
 NAME = minilib.a
 
 SRC = ft_atoi.c ft_bzero.c ft_memset.c ft_strlen.c ft_putendl_fd.c \
-	ft_putchar_fd.c
+	ft_putchar_fd.c ft_isspace.c ft_isnum.c
 	
 OBJ = $(SRC:.c=.o)
 

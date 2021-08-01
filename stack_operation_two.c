@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_operation_two.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/01 21:44:55 by chris             #+#    #+#             */
+/*   Updated: 2021/08/01 21:44:56 by chris            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pushswap.h"
 
-void		rr(t_stack *stack_a, t_stack *stack_b)
+void	rr(t_stack *stack_a, t_stack *stack_b)
 {
 	ra(stack_a, 0);
 	rb(stack_b, 0);
 	ft_putendl_fd("rr", STDOUT_FILENO);
 }
 
-void		rra(t_stack *stack_a, int print)
+void	rra(t_stack *stack_a, int print)
 {
-	int temp;
-	int i;
+	int	temp;
+	int	i;
 
 	i = stack_a->size - 1;
 	temp = stack_a->stack[stack_a->size - 1];
@@ -24,10 +36,10 @@ void		rra(t_stack *stack_a, int print)
 		ft_putendl_fd("rra", 1);
 }
 
-void		rrb(t_stack *stack_b, int print)
+void	rrb(t_stack *stack_b, int print)
 {
-	int temp;
-	int i;
+	int	temp;
+	int	i;
 
 	i = stack_b->size - 1;
 	temp = stack_b->stack[stack_b->size - 1];
@@ -41,10 +53,9 @@ void		rrb(t_stack *stack_b, int print)
 		ft_putendl_fd("rra", 1);
 }
 
-void		rrr(t_stack *stack_a, t_stack *stack_b)
+void	rrr(t_stack *stack_a, t_stack *stack_b)
 {
 	rra(stack_a, 0);
 	rrb(stack_b, 0);
 	ft_putendl_fd("rrr", 1);
 }
-

@@ -1,4 +1,16 @@
-static int				char_is_alpha(char c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/01 21:58:04 by chris             #+#    #+#             */
+/*   Updated: 2021/08/01 22:16:45 by chris            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+static int	char_is_alpha(char c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
@@ -6,7 +18,7 @@ static int				char_is_alpha(char c)
 		return (0);
 }
 
-static int				char_to_int(const char *str, int i, int neg)
+static int	char_to_int(const char *str, int i, int neg)
 {
 	unsigned int	final;
 
@@ -23,7 +35,7 @@ static int				char_to_int(const char *str, int i, int neg)
 	return (final);
 }
 
-int						ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int			i;
 	int			neg;
@@ -32,7 +44,7 @@ int						ft_atoi(const char *str)
 	i = 0;
 	neg = 1;
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\r' || str[i] == '\v'
-			|| str[i] == '\f' || str[i] == ' ')
+		|| str[i] == '\f' || str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

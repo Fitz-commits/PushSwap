@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 09:06:28 by cdelaby           #+#    #+#             */
-/*   Updated: 2021/07/27 17:18:01 by chris            ###   ########.fr       */
+/*   Updated: 2021/08/01 22:14:03 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memset(void *s, int c, size_t n)
 		return (0);
 	c1 = (unsigned char)c;
 	i = 0;
-	stri = (unsigned char*)s;
+	stri = (unsigned char *)s;
 	while (i < n)
 	{
 		stri[i] = c1;
