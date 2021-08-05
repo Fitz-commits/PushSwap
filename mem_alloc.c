@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 21:44:39 by chris             #+#    #+#             */
-/*   Updated: 2021/08/01 21:44:40 by chris            ###   ########.fr       */
+/*   Updated: 2021/08/05 19:45:43 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,21 @@ void	free_both_stack(t_stack *stack_a, t_stack *stack_b)
 int	init_and_assign(t_stack **stack_a, t_stack **stack_b, int ac, char **av)
 {
 	int	i;
+	int	flag;
 
 	i = 0;
+	flag = 0;
 	init_both_stack(stack_a, stack_b, ac - 1);
 	if (!(*stack_b) || !(*stack_a))
 		unvalid_exit("ENOMEN");
 	while (i < ac - 1)
 	{
-		(*stack_a)->stack[i] = ft_atoi(av[i + 1]);
+		(*stack_a)->stack[i] = ft_atoi(av[i + 1], &flag);
+		if (flag == 1)
+		{
+			free_both_stack(*stack_a, *stack_b);
+			unvalid_exit("Error");
+		}
 		i++;
 	}
 	(*stack_b)->size = 0;

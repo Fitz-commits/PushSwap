@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minilib.h                                          :+:      :+:    :+:   */
+/*   unvalid_exit.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/01 22:15:15 by chris             #+#    #+#             */
-/*   Updated: 2021/08/02 12:58:39 by chris            ###   ########.fr       */
+/*   Created: 2021/08/02 12:28:51 by chris             #+#    #+#             */
+/*   Updated: 2021/08/02 12:58:58 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINILIB_H
-# define MINILIB_H
+#include "pushswap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-
-int					ft_atoi(const char *str, int *flag);
-void				ft_bzero(void *s, size_t n);
-void				*ft_memset(void *s, int c, size_t n);
-int					ft_strlen(const char *str);
-void				ft_putendl_fd(char *s, int fd);
-void				ft_putchar_fd(char c, int fd);
-int					ft_ispace(char c);
-int					ft_isnum(char c);
-
-#endif
+void	unvalid_exit(char *desc)
+{
+	ft_putendl_fd(desc, 1);
+	exit(1);
+}

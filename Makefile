@@ -3,7 +3,7 @@ LIBFT_ROOT = ./mini_lib
 NAME = push_swap
 SRCS =	main.c mem_alloc.c  stack_utils.c stack_operation_one.c \
 	stack_operation_two.c stack_operation_three.c little_stack.c \
-	mapper.c radix_sort.c is_valid.c
+	mapper.c radix_sort.c is_valid.c unvalid_exit.c
 CC = gcc
 FLAGS = -Wall -Wextra -Werror -fsanitize=address
 OBJS = $(SRCS:.c=.o)

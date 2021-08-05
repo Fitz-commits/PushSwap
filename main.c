@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 21:44:24 by chris             #+#    #+#             */
-/*   Updated: 2021/08/01 21:49:29 by chris            ###   ########.fr       */
+/*   Updated: 2021/08/02 13:26:10 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	choose_algo(t_stack *stack_a, t_stack *stack_b)
 		free_both_stack(stack_a, stack_b);
 		exit(0);
 	}
+	else if (stack_a->size == 2)
+		two_number(stack_a);
 	else if (stack_a->size == 3)
 		three_number(stack_a);
 	else if (stack_a->size == 4)
@@ -43,7 +45,9 @@ int	main(int ac, char **av)
 
 	if (ac > MAX_STACK + 1)
 		unvalid_exit("Stack too big");
-	if (!is_valid(ac, av) || ac == 1)
+	if (ac == 1)
+		exit(EXIT_SUCCESS);
+	if (!is_valid(ac, av))
 		unvalid_exit("Error");
 	init_and_assign(&stack_a, &stack_b, ac, av);
 	choose_algo(stack_a, stack_b);

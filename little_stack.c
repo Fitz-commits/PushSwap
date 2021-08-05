@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 21:44:19 by chris             #+#    #+#             */
-/*   Updated: 2021/08/01 21:44:20 by chris            ###   ########.fr       */
+/*   Updated: 2021/08/02 13:25:15 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,12 @@ void	adjust(t_stack *stack_a)
 /*
 ** Push one on stack_b and get back to base case 3 and then merge
 */
+
+void	two_number(t_stack *stack_a)
+{
+	if (stack_a->stack[0] > stack_a->stack[1])
+		ra(stack_a, 1);
+}
 
 void	four_number(t_stack *stack_a, t_stack *stack_b)
 {

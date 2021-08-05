@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 21:43:48 by chris             #+#    #+#             */
-/*   Updated: 2021/08/01 21:43:49 by chris            ###   ########.fr       */
+/*   Updated: 2021/08/02 12:28:29 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,4 @@ int	check_duplicate(t_stack *stack)
 		i++;
 	}
 	return (0);
-}
-
-void	unvalid_exit(char *desc)
-{
-	ft_putendl_fd(desc, 1);
-	exit(1);
 }
